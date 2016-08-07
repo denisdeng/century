@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>马拉松查询</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="../_/styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../_/styles/main.css">
+    <link rel="stylesheet" href="../query/query.css">
+  </head>
+  <body ng-controller="AppController">
+    <div class="container-fluid">
+      <nav class="row">
+        <div class="col-md-4">“X-RUN“特步10公里计时赛报名查询</div>
+        <div class="col-md-8"><a href="/login/">登录</a><a href="/signup/">注册</a></div>
+      </nav>
+      <div id="content-container">
+        <ui-view></ui-view>
+      </div>
+    </div>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../_/js/config.js"></script>
+    <script src="../_/js/app.js"></script>
+    <script src="../_/js/apiService.js"></script>
+    <script src="../_/js/appController.js"></script>
+    <script src="../query/query.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+extends ../_/views/_base
+block style
+	link(rel='stylesheet', href='signup.css')
+block content
+	#signup.center-block
+		h3 账户设置
+		form
+			.form-group
+				label(for='username') 姓名
+				input.form-control(type='text', id='username')
+			.form-group
+				label(for='cardno') 身份证号
+				input.form-control(type='text', id='cardno')
+			.form-group
+				label(for='email') 身份证号
+				input.form-control(type='email', id='email')
+			.form-group
+				label(for='phone') 身份证号
+				input.form-control(type='text', id='phone')
+			.form-group.text-right
+				button.btn.btn-primary(type='submit') 提交
+
+block script

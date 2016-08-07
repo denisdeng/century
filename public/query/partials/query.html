@@ -1,0 +1,38 @@
+
+<div id="query" class="simple center-block">
+  <h3>查询报名信息</h3>
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="cardNo">身份证号:</label>
+      <input type="text" id="cardNo" ng-model="cardNo" class="form-control"/>
+    </div>
+    <button type="button" ng-disabled="!cardNo" ng-click="query()" class="btn btn-primary">查询</button>
+  </form>
+  <div class="result">
+    <table ng-if="info" class="table table-bordered">
+      <thead>
+        <tr>
+          <td>姓名</td>
+          <td>身份证号</td>
+          <td>性别</td>
+          <td>参赛项目</td>
+          <td>报名号</td>
+        </tr>
+      </thead>
+      <tbody ng-if="info.errno == 1">
+        <tr>
+          <td colspan="5" class="text-center">没有相关记录,请检查身份证是否输入正确.</td>
+        </tr>
+      </tbody>
+      <tbody ng-if="info.errno == 0" ng-init="data = info.data[0]">
+        <tr>
+          <td ng-bind="&quot;{{data.name}}&quot;"></td>
+          <td ng-bind="&quot;{{data.cardNo}}&quot;"></td>
+          <td ng-bind="&quot;{{data.sex}}&quot;"></td>
+          <td ng-bind="&quot;{{data.item}}&quot;"></td>
+          <td ng-bind="&quot;{{data.no}}&quot;"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

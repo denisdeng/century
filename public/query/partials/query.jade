@@ -1,0 +1,28 @@
+#query.simple.center-block
+	h3 查询报名信息
+	form.form-inline
+		.form-group
+			label(for='cardNo') 身份证号:
+			input.form-control(type='text', id='cardNo', ng-model='cardNo')
+		button.btn.btn-primary(type='button', ng-disabled='!cardNo', ng-click='query()') 查询
+
+	.result
+		table.table.table-bordered(ng-if='info')
+			thead
+				tr
+					td 姓名
+					td 身份证号
+					td 性别
+					td 参赛项目
+					td 报名号
+
+			tbody(ng-if='info.errno == 1')
+				tr
+					td.text-center(colspan='5') 没有相关记录,请检查身份证是否输入正确.
+			tbody(ng-if='info.errno == 0', ng-init='data = info.data[0]')
+				tr
+					td(ng-bind='"{{data.name}}"')
+					td(ng-bind='"{{data.cardNo}}"')
+					td(ng-bind='"{{data.sex}}"')
+					td(ng-bind='"{{data.item}}"')
+					td(ng-bind='"{{data.no}}"')

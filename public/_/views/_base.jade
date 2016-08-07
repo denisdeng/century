@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		block title
+			title 马拉松查询
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes")
+		link(rel='stylesheet', href='../_/styles/font-awesome/css/font-awesome.min.css')
+		link(rel='stylesheet', href='../bower_components/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='../_/styles/main.css')
+		block style
+
+	body(ng-controller="AppController")
+
+		.container-fluid
+			nav.row
+				.col-md-4
+					| “X-RUN“特步10公里计时赛报名查询
+				.col-md-8
+					a(href='/login/') 登录
+					a(href='/signup/') 注册
+			block content
+
+		script(src='../bower_components/jquery/dist/jquery.min.js')
+		script(src='../bower_components/angular/angular.min.js')
+		script(src='../bower_components/bootstrap/dist/js/bootstrap.min.js')
+		script(src='../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js')
+		script(src='../bower_components/angular-ui-router/release/angular-ui-router.min.js')
+		script(src='../_/js/config.js')
+		block script

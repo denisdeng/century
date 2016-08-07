@@ -1,0 +1,12 @@
+extends _/views/_base
+block style
+	link(rel='stylesheet', href='../query/query.css')
+block content
+	#content-container
+		ui-view
+block script
+	script(src='../_/js/app.js')
+	script(src='../_/js/apiService.js')
+	script(src='../_/js/appController.js')
+	script(src='../query/query.js')
+
