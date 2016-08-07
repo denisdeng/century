@@ -31,7 +31,8 @@ npm-debug.log
 
 bower_components
 fpm-components
-node_modules/*
+node_modules
+doc
 .idea
 .DS_Store
 *.min.js
