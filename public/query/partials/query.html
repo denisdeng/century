@@ -1,14 +1,18 @@
 
 <div id="query" class="simple center-block">
   <h3>查询报名信息</h3>
-  <form class="form-inline">
+  <form class="form-horizontal">
     <div class="form-group">
-      <label for="cardNo">身份证号:</label>
-      <input type="text" id="cardNo" ng-model="cardNo" class="form-control"/>
+      <div class="col-sm-2"></div>
+      <div class="col-xs-5 col-sm-6">
+        <input placeholder="身份证号" type="text" id="cardNo" ng-model="cardNo" class="form-control"/>
+      </div>
+      <div class="col-xs-4 col-sm-2">
+        <button type="button" ng-disabled="!cardNo" ng-click="query()" class="btn btn-primary">查询</button>
+      </div>
     </div>
-    <button type="button" ng-disabled="!cardNo" ng-click="query()" class="btn btn-primary">查询</button>
   </form>
-  <div class="result">
+  <div class="result visible-md-block visible-md-block visible-lg-block">
     <table ng-if="info" class="table table-bordered">
       <thead>
         <tr>
@@ -36,5 +40,37 @@
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="result visible-xs-block">
+    <div class="row">
+      <div class="col-xs-7">
+        <table ng-if="info" ng-init="data = info.data[0]" class="table table-bordered">
+          <tr>
+            <td>姓名</td>
+            <td ng-bind="&quot;{{data.name}}&quot;"></td>
+          </tr>
+          <tr>
+            <td>身份证号</td>
+            <td ng-bind="&quot;{{data.cardNo}}&quot;"></td>
+          </tr>
+          <tr>
+            <td>性别</td>
+            <td ng-bind="&quot;{{data.sex}}&quot;"></td>
+          </tr>
+          <tr>
+            <td>参赛项目</td>
+            <td ng-bind="&quot;{{data.item}}&quot;"></td>
+          </tr>
+          <tr>
+            <td>参赛号码</td>
+            <td ng-bind="&quot;{{data.no}}&quot;"></td>
+          </tr>
+          <tr>
+            <td>确认函</td>
+            <td><a href="{{host}}/file/confirmation.pdf">下载并打印确认函</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

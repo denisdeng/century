@@ -1,12 +1,14 @@
 #query.simple.center-block
 	h3 查询报名信息
-	form.form-inline
+	form.form-horizontal
 		.form-group
-			label(for='cardNo') 身份证号:
-			input.form-control(type='text', id='cardNo', ng-model='cardNo')
-		button.btn.btn-primary(type='button', ng-disabled='!cardNo', ng-click='query()') 查询
+			.col-sm-2
+			.col-xs-5.col-sm-6
+				input.form-control(placeholder='身份证号', type='text', id='cardNo', ng-model='cardNo')
+			.col-xs-4.col-sm-2
+				button.btn.btn-primary(type='button', ng-disabled='!cardNo', ng-click='query()') 查询
 
-	.result
+	.result.visible-md-block.visible-md-block.visible-lg-block
 		table.table.table-bordered(ng-if='info')
 			thead
 				tr
@@ -29,3 +31,26 @@
 					td(ng-bind='"{{data.no}}"')
 					td
 						a(href='{{host}}/file/confirmation.pdf') 下载并打印确认函
+	.result.visible-xs-block
+		.row
+			.col-xs-7
+				table.table.table-bordered(ng-if='info',ng-init='data = info.data[0]')
+					tr
+						td 姓名
+						td(ng-bind='"{{data.name}}"')
+					tr
+						td 身份证号
+						td(ng-bind='"{{data.cardNo}}"')
+					tr
+						td 性别
+						td(ng-bind='"{{data.sex}}"')
+					tr
+						td 参赛项目
+						td(ng-bind='"{{data.item}}"')
+					tr
+						td 参赛号码
+						td(ng-bind='"{{data.no}}"')
+					tr
+						td 确认函
+						td
+							a(href='{{host}}/file/confirmation.pdf') 下载并打印确认函
