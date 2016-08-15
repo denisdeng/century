@@ -35,6 +35,7 @@ angular.module('entry').config([
     function($scope, APIService, $http) {
         $scope.info = null;
         $scope.query = function () {
+            $scope.info = null;
             var cardNo = $scope.cardNo;
             if (cardNo) {
                 APIService

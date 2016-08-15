@@ -19,7 +19,10 @@ module.exports = {
     query: function* (req, res){
         utils.validateRequestParams(req, 'cardNo');
         var condition = {
-            cardNo: req.body.cardNo
+            cardNo: {
+                '$regex': req.body.cardNo,
+                $options:'i'
+            }
         };
         var users = yield Entry.getUser(condition);
         var data = {
