@@ -14,7 +14,8 @@
 					td 身份证号
 					td 性别
 					td 参赛项目
-					td 报名号
+					td 参赛号码
+					td 确认函
 
 			tbody(ng-if='info.errno == 1')
 				tr
@@ -26,3 +27,5 @@
 					td(ng-bind='"{{data.sex}}"')
 					td(ng-bind='"{{data.item}}"')
 					td(ng-bind='"{{data.no}}"')
+					td
+						a(href='{{host}}/file/confirmation.pdf') 下载并打印确认函

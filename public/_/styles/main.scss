@@ -1,14 +1,17 @@
+body{
+	font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1","SimSun","\5B8B\4F53";
+}
 nav{
 	border-bottom: 1px solid #ccc;
 	line-height: 40px;
 	margin-bottom: 10px;
 	padding: 0 20px;
-	.col-md-4{
+	.col-md-8{
 		text-align: center;
 		font-size: 20px;
 		font-weight: bold;
 	}
-	.col-md-8{
+	.col-md-4{
 		text-align: right;
 		display: none;
 		a{
@@ -27,4 +30,57 @@ nav{
 		font-size: 14px;
 		display: none;
 	}
+}
+
+@mixin  button-variant($color, $background, $border) {
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+
+	&:focus,
+	&.focus {
+		color: $color;
+		background-color: darken($background, 10%);
+		border-color: darken($border, 25%);
+	}
+	&:hover {
+		color: $color;
+		background-color: darken($background, 10%);
+		border-color: darken($border, 12%);
+	}
+	&:active,
+	&.active{
+		color: $color;
+		background-color: darken($background, 10%);
+		border-color: darken($border, 12%);
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: $color;
+			background-color: darken($background, 17%);
+			border-color: darken($border, 25%);
+		}
+	}
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: $background;
+			border-color: $border;
+		}
+	}
+
+	.badge {
+		color: $background;
+		background-color: $color;
+	}
+}
+
+.btn-primary {
+	@include button-variant(#fff, #F21B49, #FA073B);
 }

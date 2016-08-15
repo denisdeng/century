@@ -7,13 +7,13 @@ angular.module('entry').config([
     '$urlRouterProvider',
     function($compileProvider, $stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('home',{
-                url: "/",
+            .state('entry',{
+                url: "/entry",
                 templateUrl: 'query/partials/entry.html',
                 controller: 'entryCtrl'
             })
             .state('query', {
-                url: "/query",
+                url: "/",
                 templateUrl: 'query/partials/query.html',
                 controller: 'queryCtrl'
             });
@@ -43,6 +43,6 @@ angular.module('entry').config([
                         $scope.info = resp;
                     });
             }
-        }
+        };
     }
 ]);
