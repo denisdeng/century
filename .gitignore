@@ -39,5 +39,4 @@ doc
 .sass-cache
 dist
 .tmp
-server/util/xlsx/*.xlsx
-server/util/xlsx/*.json
+server/util
