@@ -34,23 +34,27 @@
 	.result.visible-xs-block
 		.row
 			.col-xs-7
-				table.table.table-bordered(ng-if='info',ng-init='data = info.data[0]')
-					tr
-						td 姓名
-						td(ng-bind='"{{data.name}}"')
-					tr
-						td 身份证号
-						td(ng-bind='"{{data.cardNo}}"')
-					tr
-						td 性别
-						td(ng-bind='"{{data.sex}}"')
-					tr
-						td 参赛项目
-						td(ng-bind='"{{data.item}}"')
-					tr
-						td 参赛号码
-						td(ng-bind='"{{data.no}}"')
-					tr
-						td 确认函
-						td
-							a(href='{{host}}/file/confirmation.pdf') 下载并打印确认函
+				table.table.table-bordered(ng-if='info')
+					tbody(ng-if='info.errno == 1')
+						tr
+							td.text-center(colspan='2') 没有相关记录,请检查身份证是否输入正确.
+					tbody(ng-if='info.errno == 0', ng-init='data = info.data[0]')
+						tr
+							td 姓名
+							td(ng-bind='"{{data.name}}"')
+						tr
+							td 身份证号
+							td(ng-bind='"{{data.cardNo}}"')
+						tr
+							td 性别
+							td(ng-bind='"{{data.sex}}"')
+						tr
+							td 参赛项目
+							td(ng-bind='"{{data.item}}"')
+						tr
+							td 参赛号码
+							td(ng-bind='"{{data.no}}"')
+						tr
+							td 确认函
+							td
+								a(href='{{host}}/file/confirmation.pdf') 下载并打印确认函

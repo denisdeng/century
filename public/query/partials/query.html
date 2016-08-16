@@ -44,31 +44,38 @@
   <div class="result visible-xs-block">
     <div class="row">
       <div class="col-xs-7">
-        <table ng-if="info" ng-init="data = info.data[0]" class="table table-bordered">
-          <tr>
-            <td>姓名</td>
-            <td ng-bind="&quot;{{data.name}}&quot;"></td>
-          </tr>
-          <tr>
-            <td>身份证号</td>
-            <td ng-bind="&quot;{{data.cardNo}}&quot;"></td>
-          </tr>
-          <tr>
-            <td>性别</td>
-            <td ng-bind="&quot;{{data.sex}}&quot;"></td>
-          </tr>
-          <tr>
-            <td>参赛项目</td>
-            <td ng-bind="&quot;{{data.item}}&quot;"></td>
-          </tr>
-          <tr>
-            <td>参赛号码</td>
-            <td ng-bind="&quot;{{data.no}}&quot;"></td>
-          </tr>
-          <tr>
-            <td>确认函</td>
-            <td><a href="{{host}}/file/confirmation.pdf">下载并打印确认函</a></td>
-          </tr>
+        <table ng-if="info" class="table table-bordered">
+          <tbody ng-if="info.errno == 1">
+            <tr>
+              <td colspan="2" class="text-center">没有相关记录,请检查身份证是否输入正确.</td>
+            </tr>
+          </tbody>
+          <tbody ng-if="info.errno == 0" ng-init="data = info.data[0]">
+            <tr>
+              <td>姓名</td>
+              <td ng-bind="&quot;{{data.name}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>身份证号</td>
+              <td ng-bind="&quot;{{data.cardNo}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>性别</td>
+              <td ng-bind="&quot;{{data.sex}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>参赛项目</td>
+              <td ng-bind="&quot;{{data.item}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>参赛号码</td>
+              <td ng-bind="&quot;{{data.no}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>确认函</td>
+              <td><a href="{{host}}/file/confirmation.pdf">下载并打印确认函</a></td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

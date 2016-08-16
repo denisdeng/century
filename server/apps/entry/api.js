@@ -18,11 +18,9 @@ module.exports = {
     },
     query: function* (req, res){
         utils.validateRequestParams(req, 'cardNo');
+        var regex = new RegExp(["^", req.body.cardNo, "$"].join(""), "i");
         var condition = {
-            cardNo: {
-                '$regex': req.body.cardNo,
-                $options:'i'
-            }
+            cardNo: regex
         };
         var users = yield Entry.getUser(condition);
         var data = {
@@ -30,5 +28,5 @@ module.exports = {
             errno: users.length > 0 ? 0 : 1
         };
         res.json(data);
-    }
+    },
 };
