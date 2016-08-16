@@ -52,3 +52,46 @@ nav {
   .btn-primary .badge {
     color: #F21B49;
     background-color: #fff; }
+
+body.print nav {
+  display: none; }
+
+#confirmation {
+  position: relative;
+  z-index: 1000;
+  margin: 0 auto;
+  width: 800px; }
+  #confirmation img {
+    position: absolute;
+    z-index: 1500;
+    width: 800px;
+    height: 1131px; }
+  #confirmation .content {
+    position: absolute;
+    z-index: 2000; }
+    #confirmation .content span {
+      position: absolute;
+      font-weight: bold;
+      font-size: 14px;
+      width: 150px; }
+      #confirmation .content span.name {
+        left: 110px;
+        top: 192px; }
+      #confirmation .content span.sex {
+        top: 192px;
+        left: 342px; }
+      #confirmation .content span.cardno {
+        top: 192px;
+        left: 562px; }
+      #confirmation .content span.item {
+        left: 140px;
+        top: 232px; }
+      #confirmation .content span.no {
+        left: 534px;
+        top: 234px; }
+      #confirmation .content span.passport {
+        left: 165px;
+        top: 276px; }
+      #confirmation .content span.suitsize {
+        top: 276px;
+        left: 554px; }

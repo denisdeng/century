@@ -83,4 +83,65 @@ nav{
 
 .btn-primary {
 	@include button-variant(#fff, #F21B49, #FA073B);
+
+
 }
+
+body {
+	&.print {
+		nav {
+			display: none;
+		}
+	}
+}
+
+#confirmation{
+	position: relative;
+	z-index: 1000;
+	margin: 0 auto;
+	width: 800px;
+	img {
+		position: absolute;
+		z-index: 1500;
+		width: 800px;
+		height: 1131px;
+	}
+	.content{
+		position: absolute;
+		z-index: 2000;
+		span{
+			position: absolute;
+			font-weight: bold;
+			font-size: 14px;
+			width: 150px;
+			&.name{
+				left:110px;
+				top:192px;
+			}
+			&.sex{
+				top:192px;
+				left:342px
+			}
+			&.cardno{
+				top:192px;
+				left: 562px;
+			}
+			&.item{
+				left:140px;
+				top:232px;
+			}
+			&.no{
+				left:534px;
+				top:234px;
+			}
+			&.passport{
+				left: 165px;
+				top: 276px;
+			}
+			&.suitsize{
+				top:276px;
+				left: 554px;
+			}
+		}
+	}
+ }

@@ -16,6 +16,11 @@ angular.module('entry').config([
                 url: "/",
                 templateUrl: 'query/partials/query.html',
                 controller: 'queryCtrl'
+            })
+            .state('print', {
+                url: "/print/:id",
+                templateUrl: 'query/partials/confirmation.html',
+                controller: 'printCtrl'
             });
         $urlRouterProvider.otherwise("/");
     }
@@ -44,6 +49,33 @@ angular.module('entry').config([
                         $scope.info = resp;
                     });
             }
+        };
+    }
+])
+.controller('printCtrl', ['$scope', 'APIService', '$stateParams',
+    function($scope, APIService, $stateParams) {
+        $('body').addClass($scope.$state.current.name);
+        var cardNo = $stateParams.id;
+        if(cardNo) {
+            APIService
+                .post('entry/query', {cardNo: cardNo})
+                .success(function (resp) {
+                    $scope.info = resp;
+                    setTimeout(function () {
+                        $scope.toPdf();
+                    }, 100);
+
+                });
+        }
+        $scope.toPdf = function (){
+            html2canvas(document.body, {
+                onrendered: function(canvas) {
+                    var dataURL = canvas.toDataURL();
+                    $('#confirmation').remove();
+                    document.body.appendChild(canvas);
+                    window.print();
+                }
+            });
         };
     }
 ]);

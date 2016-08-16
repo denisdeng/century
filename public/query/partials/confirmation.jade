@@ -1,0 +1,10 @@
+#confirmation.visible-md-block.visible-md-block.visible-lg-block(ng-if='info.errno == 0', ng-init='data = info.data[0]')
+	img.img-view(src='../../_/images/confirmation.jpg')
+	.content
+		span.name(ng-bind='"{{data.name}}"')
+		span.sex(ng-bind='"{{data.sex}}"')
+		span.cardno(ng-bind='"{{data.cardNo}}"')
+		span.item(ng-bind='"特步{{data.item}}"')
+		span.no(ng-bind='"{{data.no}}"')
+		span.passport(ng-bind='"{{data.passport}}"')
+		span.suitsize(ng-bind='"{{data.suitSize}}"')
