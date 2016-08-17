@@ -55,7 +55,7 @@ nav {
 
 body.print nav {
   display: none; }
-body.print canvas {
+body.print canvas, body.print img {
   max-width: 100%; }
 
 #confirmation {

@@ -70,9 +70,11 @@ angular.module('entry').config([
         $scope.toPdf = function (){
             html2canvas(document.body, {
                 onrendered: function(canvas) {
-                    var dataURL = canvas.toDataURL();
+                    var dataURL = canvas.toDataURL("image/jpeg");
+                    var img = new Image();
                     $('#confirmation').remove();
-                    document.body.appendChild(canvas);
+                    document.body.appendChild(img);
+                    img.src = dataURL;
                 }
             });
         };
