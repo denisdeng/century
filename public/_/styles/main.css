@@ -55,43 +55,45 @@ nav {
 
 body.print nav {
   display: none; }
+body.print canvas {
+  max-width: 100%; }
 
 #confirmation {
   position: relative;
   z-index: 1000;
   margin: 0 auto;
-  width: 800px; }
+  width: 2480px; }
   #confirmation img {
     position: absolute;
     z-index: 1500;
-    width: 800px;
-    height: 1131px; }
+    max-width: 100%; }
   #confirmation .content {
     position: absolute;
     z-index: 2000; }
     #confirmation .content span {
       position: absolute;
       font-weight: bold;
-      font-size: 14px;
-      width: 150px; }
+      font-size: 40px;
+      font-weight: bold;
+      width: 350px; }
       #confirmation .content span.name {
-        left: 110px;
-        top: 192px; }
+        left: 349px;
+        top: 490px; }
       #confirmation .content span.sex {
-        top: 192px;
-        left: 342px; }
+        top: 490px;
+        left: 1068px; }
       #confirmation .content span.cardno {
-        top: 192px;
-        left: 562px; }
+        top: 490px;
+        left: 1738px; }
       #confirmation .content span.item {
-        left: 140px;
-        top: 232px; }
+        left: 423px;
+        top: 617px; }
       #confirmation .content span.no {
-        left: 534px;
-        top: 234px; }
+        left: 1654px;
+        top: 617px; }
       #confirmation .content span.passport {
-        left: 165px;
-        top: 276px; }
+        left: 512px;
+        top: 749px; }
       #confirmation .content span.suitsize {
-        top: 276px;
-        left: 554px; }
+        top: 749px;
+        left: 1698px; }

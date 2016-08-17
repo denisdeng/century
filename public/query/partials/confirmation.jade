@@ -1,4 +1,4 @@
-#confirmation.visible-md-block.visible-md-block.visible-lg-block(ng-if='info.errno == 0', ng-init='data = info.data[0]')
+#confirmation(ng-if='info.errno == 0', ng-init='data = info.data[0]')
 	img.img-view(src='../../_/images/confirmation.jpg')
 	.content
 		span.name(ng-bind='"{{data.name}}"')
