@@ -73,7 +73,6 @@ angular.module('entry').config([
                     var dataURL = canvas.toDataURL();
                     $('#confirmation').remove();
                     document.body.appendChild(canvas);
-                    window.print();
                 }
             });
         };
