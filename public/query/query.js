@@ -70,7 +70,7 @@ angular.module('entry').config([
         $scope.toPdf = function (){
             html2canvas(document.body, {
                 onrendered: function(canvas) {
-                    var dataURL = canvas.toDataURL("image/jpeg");
+                    var dataURL = canvas.toDataURL("image/png");
                     var img = new Image();
                     $('#confirmation').remove();
                     document.body.appendChild(img);
