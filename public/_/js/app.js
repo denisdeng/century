@@ -2,6 +2,9 @@ angular.module(appConfig.appName, appConfig.dependencies)
     .run(['$rootScope', '$location', '$http', '$state',
         function($rootScope, $location, $http, $state) {
             $rootScope.$state = $state;
+            $rootScope.$on('$stateChangeStart',function() {
+                $('#confirmation-pdf').remove();
+            })
         }
     ]);
 
