@@ -29,7 +29,7 @@ angular.module('confirmation')
                     var dataURL = canvas.toDataURL("image/png");
                     var img = new Image();
                     $('#confirmation').remove();
-                    document.body.appendChild(canvas);
+                    document.body.appendChild(img);
                     img.src = dataURL;
                     //img.id = 'confirmfation-pdf';
                 }
