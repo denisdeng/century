@@ -75,6 +75,7 @@ angular.module('entry').config([
                     $('#confirmation').remove();
                     document.body.appendChild(img);
                     img.src = dataURL;
+                    img.id = 'confirmfation-pdf';
                 }
             });
         };
