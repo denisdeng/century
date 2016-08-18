@@ -39,4 +39,4 @@ doc
 .sass-cache
 dist
 .tmp
-server/util
+util
