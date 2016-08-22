@@ -3,6 +3,7 @@
 var fs = require('fs');
 var utils = require('../../utils');
 var Entry = require('./models/entry');
+var Report = require('./models/report');
 
 module.exports = {
     add: function* (req, res) {
@@ -29,4 +30,17 @@ module.exports = {
         };
         res.json(data);
     },
+    getScore: function* (req, res){
+        utils.validateRequestParams(req, 'no');
+        var regex = new RegExp(["^", req.body.no, "$"].join(""), "i");
+        var condition = {
+            no: regex
+        };
+        var users = yield Report.getScore(condition);
+        var data = {
+            data: users.map(utils.normalize),
+            errno: users.length > 0 ? 0 : 1
+        };
+        res.json(data);
+    }
 };

@@ -16,6 +16,9 @@ router.get('/add', co(api.add));
 //查询用户
 router.post('/query', co(api.query));
 
+//查询成绩
+router.post('/report', co(api.getScore));
+
 // -------- Routes End ---------
 
 module.exports = router;

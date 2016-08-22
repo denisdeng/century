@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>报名查询</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="../_/styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../_/styles/main.css">
+  </head>
+  <body ng-controller="AppController" class="print">
+    <div class="container-fluid">
+      <div ng-controller="printCtrl">
+        <div id="certification" ng-if="info.errno == 0" ng-init="data = info.data[0]"><img src="../../_/images/certification.jpg" class="img-view">
+          <div class="content"><span ng-bind="&quot;{{data.name}}&quot;" class="name"></span><span ng-bind="&quot;{{data.sex}}&quot;" class="sex"></span><span ng-bind="&quot;{{data.no}}&quot;" class="cardno"></span><span ng-bind="&quot;{{data.score}}&quot;" class="item"></span><span ng-bind="&quot;{{data.netTiming}}&quot;" class="no"></span></div>
+        </div>
+      </div>
+    </div>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../_/js/config.js"></script>
+    <script src="../_/js/app.js"></script>
+    <script src="../_/js/apiService.js"></script>
+    <script src="../_/js/appController.js"></script>
+    <script src="../_/js/html2canvas.js"></script>
+    <script src="certification.js"></script>
+  </body>
+</html>

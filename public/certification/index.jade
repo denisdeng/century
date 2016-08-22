@@ -1,0 +1,18 @@
+extends ../_/views/_base_c
+block content
+	div(ng-controller='printCtrl')
+		#certification(ng-if='info.errno == 0', ng-init='data = info.data[0]')
+			img.img-view(src='../../_/images/certification.jpg')
+			.content
+				span.name(ng-bind='"{{data.name}}"')
+				span.sex(ng-bind='"{{data.sex}}"')
+				span.cardno(ng-bind='"{{data.no}}"')
+				span.item(ng-bind='"{{data.score}}"')
+				span.no(ng-bind='"{{data.netTiming}}"')
+
+block script
+	script(src='../_/js/app.js')
+	script(src='../_/js/apiService.js')
+	script(src='../_/js/appController.js')
+	script(src='../_/js/html2canvas.js')
+	script(src='certification.js')

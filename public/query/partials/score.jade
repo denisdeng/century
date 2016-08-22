@@ -1,0 +1,62 @@
+#query.simple.center-block
+	h3 查询报名信息
+	form.form-horizontal
+		.form-group
+			.col-sm-2
+			.col-xs-5.col-sm-6
+				input.form-control(placeholder='参赛号', type='text', id='no', ng-model='no')
+			.col-xs-4.col-sm-2
+				button.btn.btn-primary(type='button', ng-disabled='!no', ng-click='query()') 查询
+
+	.result.visible-md-block.visible-md-block.visible-lg-block
+		table.table.table-bordered(ng-if='info')
+			thead
+				tr
+					td 姓名
+					td 性别
+					td 参赛号码
+					td 枪声成绩
+					td 净计时成绩
+					td 成绩证书
+
+			tbody(ng-if='info.errno == 1')
+				tr
+					td.text-center(colspan='6') 没有相关记录,请确认是否报名或参赛是否输入正确.
+			tbody(ng-if='info.errno == 0', ng-init='data = info.data[0]')
+				tr
+					td(ng-bind='"{{data.name}}"')
+					td(ng-bind='"{{data.sex}}"')
+					td(ng-bind='"{{data.no}}"')
+					td(ng-bind='"{{data.score}}"')
+					td(ng-bind='"{{data.netTiming}}"')
+					td
+						a(ng-href='/certification/?num={{data.no}}',target='_blank') 查看成绩证书
+
+	.result.visible-xs-block
+		.row
+			.col-xs-7
+				table.table.table-bordered(ng-if='info')
+					tbody(ng-if='info.errno == 1')
+						tr
+							td.text-center(colspan='2') 没有相关记录,请确认是否报名或参赛是否输入正确..
+					tbody(ng-if='info.errno == 0', ng-init='data = info.data[0]')
+						tr
+							td 姓名
+							td(ng-bind='"{{data.name}}"')
+						tr
+							td 性别
+							td(ng-bind='"{{data.sex}}"')
+						tr
+							td 参赛号码
+							td(ng-bind='"{{data.no}}"')
+						tr
+							td 枪声成绩
+							td(ng-bind='"{{data.score}}"')
+						tr
+							td 净计时成绩
+							td(ng-bind='"{{data.neTiming}}"')
+						tr
+							td 成绩证书
+							td
+								a(ng-href='/certification/?num={{data.no}}',target='_blank') 查看成绩证书
+

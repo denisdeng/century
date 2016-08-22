@@ -98,7 +98,7 @@ body {
 	}
 }
 
-#confirmation{
+#confirmation,#certification{
 	position: relative;
 	z-index: 1000;
 	margin: 0 auto;
@@ -148,3 +148,6 @@ body {
 		}
 	}
  }
+#certification{
+	width: 1754px;
+}

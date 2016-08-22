@@ -58,42 +58,45 @@ body.print nav {
 body.print canvas, body.print img {
   max-width: 100%; }
 
-#confirmation {
+#confirmation, #certification {
   position: relative;
   z-index: 1000;
   margin: 0 auto;
   width: 2480px; }
-  #confirmation img {
+  #confirmation img, #certification img {
     position: absolute;
     z-index: 1500;
     max-width: 100%; }
-  #confirmation .content {
+  #confirmation .content, #certification .content {
     position: absolute;
     z-index: 2000; }
-    #confirmation .content span {
+    #confirmation .content span, #certification .content span {
       position: absolute;
       font-weight: bold;
       font-size: 40px;
       font-weight: bold;
       width: 350px; }
-      #confirmation .content span.name {
+      #confirmation .content span.name, #certification .content span.name {
         left: 450px;
         top: 490px; }
-      #confirmation .content span.sex {
+      #confirmation .content span.sex, #certification .content span.sex {
         top: 490px;
         left: 1130px; }
-      #confirmation .content span.cardno {
+      #confirmation .content span.cardno, #certification .content span.cardno {
         top: 490px;
         left: 1800px; }
-      #confirmation .content span.item {
+      #confirmation .content span.item, #certification .content span.item {
         left: 520px;
         top: 617px; }
-      #confirmation .content span.no {
+      #confirmation .content span.no, #certification .content span.no {
         left: 1780px;
         top: 617px; }
-      #confirmation .content span.passport {
+      #confirmation .content span.passport, #certification .content span.passport {
         left: 575px;
         top: 749px; }
-      #confirmation .content span.suitsize {
+      #confirmation .content span.suitsize, #certification .content span.suitsize {
         top: 749px;
         left: 1830px; }
+
+#certification {
+  width: 1754px; }

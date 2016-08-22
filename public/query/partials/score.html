@@ -1,0 +1,83 @@
+
+<div id="query" class="simple center-block">
+  <h3>查询报名信息</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-sm-2"></div>
+      <div class="col-xs-5 col-sm-6">
+        <input placeholder="参赛号" type="text" id="no" ng-model="no" class="form-control"/>
+      </div>
+      <div class="col-xs-4 col-sm-2">
+        <button type="button" ng-disabled="!no" ng-click="query()" class="btn btn-primary">查询</button>
+      </div>
+    </div>
+  </form>
+  <div class="result visible-md-block visible-md-block visible-lg-block">
+    <table ng-if="info" class="table table-bordered">
+      <thead>
+        <tr>
+          <td>姓名</td>
+          <td>性别</td>
+          <td>参赛号码</td>
+          <td>枪声成绩</td>
+          <td>净计时成绩</td>
+          <td>成绩证书</td>
+        </tr>
+      </thead>
+      <tbody ng-if="info.errno == 1">
+        <tr>
+          <td colspan="6" class="text-center">没有相关记录,请确认是否报名或参赛是否输入正确.</td>
+        </tr>
+      </tbody>
+      <tbody ng-if="info.errno == 0" ng-init="data = info.data[0]">
+        <tr>
+          <td ng-bind="&quot;{{data.name}}&quot;"></td>
+          <td ng-bind="&quot;{{data.sex}}&quot;"></td>
+          <td ng-bind="&quot;{{data.no}}&quot;"></td>
+          <td ng-bind="&quot;{{data.score}}&quot;"></td>
+          <td ng-bind="&quot;{{data.netTiming}}&quot;"></td>
+          <td><a ng-href="/certification/?num={{data.no}}" target="_blank">查看成绩证书</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="result visible-xs-block">
+    <div class="row">
+      <div class="col-xs-7">
+        <table ng-if="info" class="table table-bordered">
+          <tbody ng-if="info.errno == 1">
+            <tr>
+              <td colspan="2" class="text-center">没有相关记录,请确认是否报名或参赛是否输入正确..</td>
+            </tr>
+          </tbody>
+          <tbody ng-if="info.errno == 0" ng-init="data = info.data[0]">
+            <tr>
+              <td>姓名</td>
+              <td ng-bind="&quot;{{data.name}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>性别</td>
+              <td ng-bind="&quot;{{data.sex}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>参赛号码</td>
+              <td ng-bind="&quot;{{data.no}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>枪声成绩</td>
+              <td ng-bind="&quot;{{data.score}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>净计时成绩</td>
+              <td ng-bind="&quot;{{data.neTiming}}&quot;"></td>
+            </tr>
+            <tr>
+              <td>成绩证书</td>
+              <td><a ng-href="/certification/?num={{data.no}}" target="_blank">查看成绩证书</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

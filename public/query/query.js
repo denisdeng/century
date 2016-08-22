@@ -17,8 +17,13 @@ angular.module('entry').config([
                 templateUrl: 'query/partials/query.html',
                 controller: 'queryCtrl'
             })
+            .state('score', {
+                url: "/score",
+                templateUrl: 'query/partials/score.html',
+                controller: 'scoreCtrl'
+            })
             .state('print', {
-                url: "/print/:id",
+                url: "/print/:type/:id",
                 templateUrl: 'query/partials/confirmation.html',
                 controller: 'printCtrl'
             });
@@ -45,6 +50,22 @@ angular.module('entry').config([
             if (cardNo) {
                 APIService
                     .post('entry/query', {cardNo: cardNo})
+                    .success(function (resp) {
+                        $scope.info = resp;
+                    });
+            }
+        };
+    }
+])
+.controller('scoreCtrl', ['$scope', 'APIService', '$http',
+    function($scope, APIService, $http) {
+        $scope.info = null;
+        $scope.query = function () {
+            $scope.info = null;
+            var no = $scope.no;
+            if (no) {
+                APIService
+                    .post('entry/report', {no: no})
                     .success(function (resp) {
                         $scope.info = resp;
                     });
