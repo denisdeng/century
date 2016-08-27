@@ -21,7 +21,7 @@
 
 			tbody(ng-if='info.errno == 1')
 				tr
-					td.text-center(colspan='6') 没有相关记录,请确认是否报名或参赛是否输入正确.
+					td.text-center(colspan='6') 没有相关记录,请确认是否报名或参赛号码是否输入正确.
 			tbody(ng-if='info.errno == 0', ng-init='data = info.data[0]')
 				tr
 					td(ng-bind='"{{data.name}}"')
@@ -38,7 +38,7 @@
 				table.table.table-bordered(ng-if='info')
 					tbody(ng-if='info.errno == 1')
 						tr
-							td.text-center(colspan='2') 没有相关记录,请确认是否报名或参赛是否输入正确..
+							td.text-center(colspan='2') 没有相关记录,请确认是否报名或参赛号码是否输入正确..
 					tbody(ng-if='info.errno == 0', ng-init='data = info.data[0]')
 						tr
 							td 姓名
