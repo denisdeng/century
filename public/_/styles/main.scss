@@ -150,4 +150,74 @@ body {
  }
 #certification{
 	width: 1754px;
+	.content{
+		span{
+			font-size: 28px;
+			&.name{
+				left: 248px;
+				top: 500px;
+			}
+			&.no{
+				left: 248px;
+				top: 609px;
+			}
+			&.sex{
+				left: 518px;
+				top: 609px
+			}
+			&.score{
+				left: 278px;
+				top: 716px;
+			}
+			&.net-timing{
+				left: 610px;
+				top: 716px;
+			}
+			&.pace{
+				left: 282px;
+				top: 823px;
+			}
+			&.sex-rank-score{
+				left: 1158px;
+				top: 432px;
+			}
+			&.sex-rank-net-timing{
+				left: 1186px;
+				top: 505px;
+			}
+			&.sex-total{
+				left:1359px;
+				top: 432px;
+			}
+			&.sex-total-1{
+				left: 1359px;
+				top: 505px;
+			}
+			&.rank-score{
+				left: 1158px;
+				top: 717px;
+			}
+			&.rank-net-timing{
+				left: 1186px;
+				top: 787px;
+			}
+			&.total{
+				left:1359px;
+				top: 717px;
+			}
+			&.total-1{
+				left: 1359px;
+				top: 787px;
+			}
+			&.center{
+				text-align: center;
+				display: inline-block;
+				width: 160px;
+				em{
+					font-style: normal;
+
+				}
+			}
+		}
+	}
 }

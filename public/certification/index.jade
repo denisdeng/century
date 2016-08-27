@@ -6,9 +6,26 @@ block content
 			.content
 				span.name(ng-bind='"{{data.name}}"')
 				span.sex(ng-bind='"{{data.sex}}"')
-				span.cardno(ng-bind='"{{data.no}}"')
-				span.item(ng-bind='"{{data.score}}"')
 				span.no(ng-bind='"{{data.netTiming}}"')
+				span.score(ng-bind='"{{data.score}}"')
+				span.net-timing(ng-bind='"{{data.netTiming}}"')
+				span.pace(ng-bind='"{{data.pace}}"')
+				span.sex-rank-score.center
+					em(ng-bind='"{{data.sexRankScore}}"')
+				span.sex-total.center
+					em(ng-bind='"{{data.sexTotal}}"')
+				span.sex-rank-net-timing.center
+					em(ng-bind='"{{data.sexRankNetTiming}}"')
+				span.sex-total-1.center
+					em(ng-bind='"{{data.sexTotal}}"')
+				span.rank-score.center
+					em(ng-bind='"{{data.rankScore}}"')
+				span.total.center
+					em(ng-bind='"{{data.total}}"')
+				span.rank-net-timing.center
+					em(ng-bind='"{{data.rankNetTiming}}"')
+				span.total-1.center
+					em(ng-bind='"{{data.total}}"')
 
 block script
 	script(src='../_/js/app.js')

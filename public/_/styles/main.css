@@ -100,3 +100,53 @@ body.print canvas, body.print img {
 
 #certification {
   width: 1754px; }
+  #certification .content span {
+    font-size: 28px; }
+    #certification .content span.name {
+      left: 248px;
+      top: 500px; }
+    #certification .content span.no {
+      left: 248px;
+      top: 609px; }
+    #certification .content span.sex {
+      left: 518px;
+      top: 609px; }
+    #certification .content span.score {
+      left: 278px;
+      top: 716px; }
+    #certification .content span.net-timing {
+      left: 610px;
+      top: 716px; }
+    #certification .content span.pace {
+      left: 282px;
+      top: 823px; }
+    #certification .content span.sex-rank-score {
+      left: 1158px;
+      top: 432px; }
+    #certification .content span.sex-rank-net-timing {
+      left: 1186px;
+      top: 505px; }
+    #certification .content span.sex-total {
+      left: 1359px;
+      top: 432px; }
+    #certification .content span.sex-total-1 {
+      left: 1359px;
+      top: 505px; }
+    #certification .content span.rank-score {
+      left: 1158px;
+      top: 717px; }
+    #certification .content span.rank-net-timing {
+      left: 1186px;
+      top: 787px; }
+    #certification .content span.total {
+      left: 1359px;
+      top: 717px; }
+    #certification .content span.total-1 {
+      left: 1359px;
+      top: 787px; }
+    #certification .content span.center {
+      text-align: center;
+      display: inline-block;
+      width: 160px; }
+      #certification .content span.center em {
+        font-style: normal; }
