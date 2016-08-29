@@ -1,12 +1,12 @@
 #query.simple.center-block
 	h3 查询报名信息
-	form.form-horizontal
+	form.form-horizontal(ng-submit='query()')
 		.form-group
 			.col-sm-2
 			.col-xs-5.col-sm-6
 				input.form-control(placeholder='参赛号', type='text', id='no', ng-model='no')
 			.col-xs-4.col-sm-2
-				button.btn.btn-primary(type='button', ng-disabled='!no', ng-click='query()') 查询
+				button.btn.btn-primary(type='submit', ng-disabled='!no') 查询
 
 	.result.visible-md-block.visible-md-block.visible-lg-block
 		table.table.table-bordered(ng-if='info')

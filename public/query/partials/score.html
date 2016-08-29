@@ -1,14 +1,14 @@
 
 <div id="query" class="simple center-block">
   <h3>查询报名信息</h3>
-  <form class="form-horizontal">
+  <form ng-submit="query()" class="form-horizontal">
     <div class="form-group">
       <div class="col-sm-2"></div>
       <div class="col-xs-5 col-sm-6">
         <input placeholder="参赛号" type="text" id="no" ng-model="no" class="form-control"/>
       </div>
       <div class="col-xs-4 col-sm-2">
-        <button type="button" ng-disabled="!no" ng-click="query()" class="btn btn-primary">查询</button>
+        <button type="submit" ng-disabled="!no" class="btn btn-primary">查询</button>
       </div>
     </div>
   </form>
