@@ -26,7 +26,7 @@
       </thead>
       <tbody ng-if="info.errno == 1">
         <tr>
-          <td colspan="6" class="text-center">没有相关记录,请确认是否报名或参赛号码是否输入正确.</td>
+          <td colspan="6" class="text-center">没有相关记录，请确认是否完赛或参赛号码是否输入正确.</td>
         </tr>
       </tbody>
       <tbody ng-if="info.errno == 0" ng-init="data = info.data[0]">
@@ -47,7 +47,7 @@
         <table ng-if="info" class="table table-bordered">
           <tbody ng-if="info.errno == 1">
             <tr>
-              <td colspan="2" class="text-center">没有相关记录,请确认是否报名或参赛号码是否输入正确..</td>
+              <td colspan="2" class="text-center">没有相关记录，请确认是否完赛或参赛号码是否输入正确.</td>
             </tr>
           </tbody>
           <tbody ng-if="info.errno == 0" ng-init="data = info.data[0]">

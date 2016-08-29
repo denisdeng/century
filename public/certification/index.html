@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>打印证书</title>
+    <title>查看证书</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
     <link rel="stylesheet" href="../_/styles/font-awesome/css/font-awesome.min.css">
@@ -14,7 +14,7 @@
     <div class="container-fluid">
       <div ng-controller="printCtrl">
         <div id="certification" ng-if="info.errno == 0" ng-init="data = info.data[0]"><img src="../../_/images/certification.jpg" class="img-view">
-          <div class="content"><span class="name center"><em ng-bind="&quot;{{data.name}}&quot;"></em></span><span class="sex center"><em ng-bind="&quot;{{data.sex}}&quot;"></em></span><span class="no center"><em ng-bind="&quot;{{data.netTiming}}&quot;"></em></span><span class="score center"><em ng-bind="&quot;{{data.score}}&quot;"></em></span><span class="net-timing center"><em ng-bind="&quot;{{data.netTiming}}&quot;"></em></span><span class="pace center"><em ng-bind="&quot;{{data.pace}}&quot;"></em></span><span class="sex-rank-score center"><em ng-bind="&quot;{{data.sexRankScore}}&quot;"></em></span><span class="sex-total center"><em ng-bind="&quot;{{data.sexTotal}}&quot;"></em></span><span class="sex-rank-net-timing center"><em ng-bind="&quot;{{data.sexRankNetTiming}}&quot;"></em></span><span class="sex-total-1 center"><em ng-bind="&quot;{{data.sexTotal}}&quot;"></em></span><span class="rank-score center"><em ng-bind="&quot;{{data.rankScore}}&quot;"></em></span><span class="total center"><em ng-bind="&quot;{{data.total}}&quot;"></em></span><span class="rank-net-timing center"><em ng-bind="&quot;{{data.rankNetTiming}}&quot;"></em></span><span class="total-1 center"><em ng-bind="&quot;{{data.total}}&quot;"></em></span></div>
+          <div class="content"><span class="name center"><em ng-bind="&quot;{{data.name}}&quot;"></em></span><span class="sex center"><em ng-bind="&quot;{{data.sex}}&quot;"></em></span><span class="no center"><em ng-bind="&quot;{{data.no}}&quot;"></em></span><span class="score center"><em ng-bind="&quot;{{data.score}}&quot;"></em></span><span class="net-timing center"><em ng-bind="&quot;{{data.netTiming}}&quot;"></em></span><span class="pace center"><em ng-bind="&quot;{{data.pace}}&quot;"></em></span><span class="sex-rank-score center"><em ng-bind="&quot;{{data.sexRankScore}}&quot;"></em></span><span class="sex-total center"><em ng-bind="&quot;{{data.sexTotal}}&quot;"></em></span><span class="sex-rank-net-timing center"><em ng-bind="&quot;{{data.sexRankNetTiming}}&quot;"></em></span><span class="sex-total-1 center"><em ng-bind="&quot;{{data.sexTotal}}&quot;"></em></span><span class="rank-score center"><em ng-bind="&quot;{{data.rankScore}}&quot;"></em></span><span class="total center"><em ng-bind="&quot;{{data.total}}&quot;"></em></span><span class="rank-net-timing center"><em ng-bind="&quot;{{data.rankNetTiming}}&quot;"></em></span><span class="total-1 center"><em ng-bind="&quot;{{data.total}}&quot;"></em></span></div>
         </div>
       </div>
     </div>
