@@ -4,12 +4,18 @@ block content
 		#certification(ng-if='info.errno == 0', ng-init='data = info.data[0]')
 			img.img-view(src='../../_/images/certification.jpg')
 			.content
-				span.name(ng-bind='"{{data.name}}"')
-				span.sex(ng-bind='"{{data.sex}}"')
-				span.no(ng-bind='"{{data.netTiming}}"')
-				span.score(ng-bind='"{{data.score}}"')
-				span.net-timing(ng-bind='"{{data.netTiming}}"')
-				span.pace(ng-bind='"{{data.pace}}"')
+				span.name.center
+					em(ng-bind='"{{data.name}}"')
+				span.sex.center
+					em(ng-bind='"{{data.sex}}"')
+				span.no.center
+					em(ng-bind='"{{data.netTiming}}"')
+				span.score.center
+					em(ng-bind='"{{data.score}}"')
+				span.net-timing.center
+					em(ng-bind='"{{data.netTiming}}"')
+				span.pace.center
+					em(ng-bind='"{{data.pace}}"')
 				span.sex-rank-score.center
 					em(ng-bind='"{{data.sexRankScore}}"')
 				span.sex-total.center
