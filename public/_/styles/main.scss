@@ -119,31 +119,35 @@ body {
 			width: 350px;
 			&.name{
 				left:450px;
-				top:490px;
+				top:555px;
 			}
 			&.sex{
-				top:490px;
+				top:555px;
 				left:1130px
 			}
 			&.cardno{
-				top:490px;
+				top:555px;
 				left:1800px;
 			}
 			&.item{
 				left:520px;
-				top:617px;
+				top:685px;
 			}
 			&.no{
 				left:1780px;
-				top:617px;
+				top:685px;
 			}
 			&.passport{
 				left: 575px;
 				top: 749px;
 			}
 			&.suitsize{
-				top: 749px;
-				left: 1830px;
+				top: 812px;
+				left: 575px;
+			}
+			&.shoesize{
+				top: 812px;
+				left: 1750px;
 			}
 		}
 	}

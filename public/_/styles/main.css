@@ -78,25 +78,28 @@ body.print canvas, body.print img {
       width: 350px; }
       #confirmation .content span.name, #certification .content span.name {
         left: 450px;
-        top: 490px; }
+        top: 555px; }
       #confirmation .content span.sex, #certification .content span.sex {
-        top: 490px;
+        top: 555px;
         left: 1130px; }
       #confirmation .content span.cardno, #certification .content span.cardno {
-        top: 490px;
+        top: 555px;
         left: 1800px; }
       #confirmation .content span.item, #certification .content span.item {
         left: 520px;
-        top: 617px; }
+        top: 685px; }
       #confirmation .content span.no, #certification .content span.no {
         left: 1780px;
-        top: 617px; }
+        top: 685px; }
       #confirmation .content span.passport, #certification .content span.passport {
         left: 575px;
         top: 749px; }
       #confirmation .content span.suitsize, #certification .content span.suitsize {
-        top: 749px;
-        left: 1830px; }
+        top: 812px;
+        left: 575px; }
+      #confirmation .content span.shoesize, #certification .content span.shoesize {
+        top: 812px;
+        left: 1750px; }
 
 #certification {
   width: 1754px; }

@@ -1,5 +1,5 @@
 #query.simple.center-block
-	h3 查询报名信息
+	h3 报名查询
 	form.form-horizontal
 		.form-group
 			.col-sm-2
@@ -15,7 +15,7 @@
 					td 姓名
 					td 身份证号
 					td 性别
-					td 参赛项目
+					td 类别
 					td 参赛号码
 					td 确认函
 
@@ -50,7 +50,7 @@
 							td 性别
 							td(ng-bind='"{{data.sex}}"')
 						tr
-							td 参赛项目
+							td 类别
 							td(ng-bind='"特步{{data.item}}"')
 						tr
 							td 参赛号码
